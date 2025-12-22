@@ -1,0 +1,5 @@
+---
+alwaysApply: true
+---
+
+Whenever I ask you to create a new feature, include a test for that feature. Also, re-run existing tests to confirm existing functionality hasn't broken.
