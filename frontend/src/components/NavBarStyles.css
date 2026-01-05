@@ -5,20 +5,20 @@
   position: sticky;
   top: 0;
   z-index: 2;
-  background-color: #bcd4de;
+  background-color: #2a2a2a;
   padding: 1rem 2rem;
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid #444;
 }
 
 .nav-brand a {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #333;
+  color: #ffcd29;
   text-decoration: none;
 }
 
 .nav-brand a:hover {
-  color: #007bff;
+  color: #ffd84d;
 }
 
 .nav-links {
@@ -33,7 +33,7 @@
 }
 
 .nav-link {
-  color: #666;
+  color: #cccccc;
   text-decoration: none;
   padding: 0.5rem 1rem;
   border-radius: 4px;
@@ -41,8 +41,8 @@
 }
 
 .nav-link:hover {
-  color: #007bff;
-  background-color: #e9ecef;
+  color: #ffcd29;
+  background-color: #333;
 }
 
 .user-section {
@@ -52,21 +52,22 @@
 }
 
 .username {
-  color: #666;
+  color: #cccccc;
   font-weight: 500;
 }
 
 .logout-btn {
-  background-color: #dc3545;
-  color: white;
-  border: none;
+  background-color: #444;
+  color: #cccccc;
+  border: 1px solid #666;
   padding: 0.5rem 1rem;
   border-radius: 4px;
   cursor: pointer;
   font-size: 0.875rem;
-  transition: background-color 0.2s;
+  transition: all 0.2s;
 }
 
 .logout-btn:hover {
-  background-color: #c82333;
+  background-color: #555;
+  border-color: #777;
 }
