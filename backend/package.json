@@ -6,7 +6,8 @@
     "start": "NODE_ENV=production node app.js",
     "build": "npm install",
     "start-dev": "NODE_ENV=development nodemon app.js",
-    "seed": "node database/seed.js"
+    "seed": "node database/seed.js",
+    "test": "jest"
   },
   "keywords": [],
   "author": "",
@@ -25,6 +26,7 @@
     "socket.io": "^4.8.1"
   },
   "devDependencies": {
+    "jest": "^30.2.0",
     "nodemon": "^3.1.10"
   },
   "optionalDependencies": {
