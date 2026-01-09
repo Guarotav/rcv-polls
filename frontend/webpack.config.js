@@ -1,5 +1,6 @@
 const path = require("path");
 const webpack = require("webpack");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 require("dotenv").config();
 
 module.exports = {
@@ -12,6 +13,10 @@ module.exports = {
   },
   devtool: "source-map",
   plugins: [
+    new HtmlWebpackPlugin({
+      template: "./src/index.html",
+      filename: "index.html",
+    }),
     new webpack.EnvironmentPlugin({
       NODE_ENV: "development",
       API_URL: "http://localhost:8080",

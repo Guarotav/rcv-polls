@@ -73,6 +73,7 @@ const seed = async () => {
       creatorId: users[1].id, // alice
       activatedAt: new Date(Date.now() - 3600000), // 1 hour ago
       endDate: new Date(Date.now() + 86400000), // 24 hours from now
+      slug: "favorite-pizza-topping",
     });
 
     const activePoll1Options = await PollOption.bulkCreate([
@@ -135,6 +136,7 @@ const seed = async () => {
       creatorId: users[0].id, // admin
       activatedAt: new Date(Date.now() - 86400000), // 1 day ago
       endDate: new Date(Date.now() - 43200000), // 12 hours ago
+      slug: "best-movie-genre",
     });
 
     const closedPollOptions = await PollOption.bulkCreate([
@@ -350,6 +352,7 @@ const seed = async () => {
       creatorId: users[3].id, // charlie
       activatedAt: new Date(Date.now() - 1800000), // 30 minutes ago
       endDate: new Date(Date.now() + 172800000), // 48 hours from now
+      slug: "preferred-work-environment",
     });
 
     const activePoll3Options = await PollOption.bulkCreate([
