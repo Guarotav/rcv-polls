@@ -1,0 +1,307 @@
+.edit-poll-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+}
+
+.edit-poll-container h1 {
+  color: #ffcd29;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  width: 100%;
+}
+
+.status-badge.status-draft {
+  background-color: rgba(255, 205, 41, 0.2);
+  color: #ffcd29;
+  border: 1px solid rgba(255, 205, 41, 0.4);
+}
+
+.status-badge.status-active {
+  background-color: rgba(40, 167, 69, 0.2);
+  color: #28a745;
+  border: 1px solid rgba(40, 167, 69, 0.4);
+}
+
+.status-badge.status-closed {
+  background-color: rgba(220, 53, 69, 0.2);
+  color: #dc3545;
+  border: 1px solid rgba(220, 53, 69, 0.4);
+}
+
+.loading {
+  text-align: center;
+  padding: 2rem;
+  color: #999;
+  font-size: 1rem;
+}
+
+.edit-poll-form {
+  background: #2a2a2a;
+  padding: 2rem;
+  border-radius: 8px;
+  border: 1px solid #444;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #cccccc;
+  font-size: 0.95rem;
+}
+
+.form-group input[type="text"],
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #444;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-family: inherit;
+  background-color: #333;
+  color: #cccccc;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-group input[type="text"]:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #ffcd29;
+  box-shadow: 0 0 4px rgba(255, 205, 41, 0.3);
+}
+
+.form-group input.input-error,
+.form-group textarea.input-error {
+  border-color: #dc3545;
+}
+
+.form-group input.input-disabled,
+.form-group textarea.input-disabled {
+  background-color: #1a1a1a;
+  cursor: not-allowed;
+  color: #666;
+  border-color: #333;
+}
+
+.message {
+  padding: 0.75rem;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.message.success {
+  background-color: rgba(40, 167, 69, 0.2);
+  color: #28a745;
+  border: 1px solid rgba(40, 167, 69, 0.4);
+}
+
+.message.error {
+  background-color: rgba(220, 53, 69, 0.2);
+  color: #dc3545;
+  border: 1px solid rgba(220, 53, 69, 0.4);
+}
+
+.error-message,
+.field-error {
+  display: block;
+  color: #dc3545;
+  font-size: 0.85rem;
+  margin-top: 0.4rem;
+}
+
+.option-input-group {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+  align-items: center;
+}
+
+.option-input-group input {
+  flex: 1;
+  padding: 0.75rem;
+  border: 1px solid #444;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  background-color: #333;
+  color: #cccccc;
+  transition: border-color 0.3s;
+}
+
+.option-input-group input:focus {
+  outline: none;
+  border-color: #ffcd29;
+}
+
+.option-input-group input.input-error {
+  border-color: #dc3545;
+}
+
+.option-input-group input.input-disabled {
+  background-color: #1a1a1a;
+  cursor: not-allowed;
+  color: #666;
+  border-color: #333;
+}
+
+.btn-remove-option {
+  padding: 0.5rem 0.75rem;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.btn-remove-option:hover {
+  background-color: #c82333;
+}
+
+.btn-add-option {
+  margin-top: 0.5rem;
+  padding: 0.75rem 1rem;
+  background-color: #444;
+  color: #ffcd29;
+  border: 1px solid #666;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.btn-add-option:hover {
+  background-color: #555;
+  border-color: #ffcd29;
+}
+
+.form-actions {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.btn-primary,
+.btn-secondary,
+.btn-publish,
+.btn-danger {
+  flex: 1;
+  min-width: 100px;
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-primary {
+  background-color: #ffcd29;
+  color: #2a2a2a;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background-color: #ffd966;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 6px rgba(255, 205, 41, 0.3);
+}
+
+.btn-primary:disabled {
+  background-color: #666;
+  color: #999;
+  cursor: not-allowed;
+}
+
+.btn-secondary {
+  background-color: #444;
+  color: #cccccc;
+  border: 1px solid #666;
+}
+
+.btn-secondary:hover:not(:disabled) {
+  background-color: #555;
+  border-color: #888;
+}
+
+.btn-secondary:disabled {
+  background-color: #333;
+  color: #666;
+  cursor: not-allowed;
+}
+
+.btn-publish {
+  background-color: #28a745;
+  color: white;
+}
+
+.btn-publish:hover:not(:disabled) {
+  background-color: #218838;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 6px rgba(40, 167, 69, 0.3);
+}
+
+.btn-publish:disabled {
+  background-color: #666;
+  color: #999;
+  cursor: not-allowed;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  color: white;
+}
+
+.btn-danger:hover:not(:disabled) {
+  background-color: #c82333;
+}
+
+.btn-danger:disabled {
+  background-color: #666;
+  color: #999;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .edit-poll-container {
+    padding: 1rem;
+  }
+
+  .edit-poll-container h1 {
+    font-size: 1.5rem;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+
+  .btn-primary,
+  .btn-secondary,
+  .btn-publish,
+  .btn-danger {
+    width: 100%;
+  }
+}

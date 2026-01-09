@@ -1,0 +1,5 @@
+---
+alwaysApply: true
+---
+
+A test should be run everytime something is changed and make sure it passes the tests. If a test is not made for something and should contain a test for it, then make one for it.
