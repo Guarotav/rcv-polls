@@ -51,6 +51,34 @@
   gap: 1rem;
 }
 
+.my-polls-link {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.my-polls-link:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.create-poll-link {
+  color: #ffcd29;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  background-color: #333;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.create-poll-link:hover {
+  background-color: #444;
+  color: #ffd84d;
+}
+
 .username {
   color: #cccccc;
   font-weight: 500;
