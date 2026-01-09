@@ -1,6 +1,5 @@
 const { DataTypes } = require("sequelize");
 const db = require("./db");
-const { randomBytes } = require("crypto");
 
 const Poll = db.define("poll", {
   title: {
@@ -37,23 +36,31 @@ const Poll = db.define("poll", {
     type: DataTypes.DATE,
     allowNull: true,
   },
-  shareableId: {
+  slug: {
     type: DataTypes.STRING,
     allowNull: true,
-    unique: true,
   },
 });
+
+// Helper function to generate slug from title
+const generateSlug = (title) => {
+  return title
+    .toLowerCase()
+    .trim()
+    .replace(/[^\w\s-]/g, "") // Remove special characters
+    .replace(/\s+/g, "-") // Replace spaces with hyphens
+    .replace(/-+/g, "-") // Replace multiple hyphens with single hyphen
+    .substring(0, 50); // Limit length
+};
 
 // Instance method to activate poll
 Poll.prototype.activate = function () {
   this.status = "active";
   this.activatedAt = new Date();
 
-  // Generate a unique shareableId if not already set
-  if (!this.shareableId) {
-    // Generate a short, URL-friendly ID (8 characters, base64url encoded)
-    const buffer = randomBytes(6);
-    this.shareableId = buffer.toString("base64url").substring(0, 8);
+  // Generate slug from title if not already set
+  if (!this.slug) {
+    this.slug = generateSlug(this.title);
   }
 
   return this;
